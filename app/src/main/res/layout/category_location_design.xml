@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    android:layout_marginEnd="20dp"
+    app:cardCornerRadius="5dp"
+    app:cardMaxElevation="0dp"
+    android:layout_width="wrap_content">
+<LinearLayout
+     android:layout_width="160dp"
+    android:layout_height="280dp"
+    android:padding="15dp"
+    android:layout_weight="4"
+    android:orientation="vertical"
+    android:background="#FFF">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/hosp"
+        android:id="@+id/photo"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_weight="2"
+        />
+
+    <TextView
+        android:id="@+id/hospital_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:fontFamily="@font/acme"
+        android:gravity="center_vertical"
+        android:text="St. Mountain "
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:textColor="#000"
+        android:text="@string/hosDes"
+        android:id="@+id/des"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

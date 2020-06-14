@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient"
+    android:background="#19160E"
     android:layout_height="match_parent"
     tools:context=".Login">
 
@@ -51,8 +51,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:hint="Email"
-                    android:textColor="#020000"
-                    android:textColorHint="#000"
+                    android:textColor="#6E1A1A"
+
+                    android:textColorHint="#B51616"
                     android:id="@+id/email"
                     android:layout_height="wrap_content" />
             </LinearLayout>

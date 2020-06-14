@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient"
+    android:background="#1E88E5"
     android:layout_height="match_parent"
     tools:context=".Signup">
 
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rec_gradient"
+            android:background="#010207"
             android:fontFamily="@font/abhaya_libre"
             android:gravity="center"
             android:text="Sign Up"

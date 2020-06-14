@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_marginEnd="10dp"
+    android:background="#FFFFFF"
+    android:padding="10dp"
+    android:layout_height="150dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:scaleType="center"
+        android:id="@+id/photo"
+        android:src="@drawable/hosp"
+        android:layout_height="130dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Mc Donald"
+        android:id="@+id/name"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/acme"
+        android:textColor="#000"
+        android:layout_toRightOf="@+id/photo"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rating"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#000"
+        android:layout_marginStart="10dp"
+        android:rating="4"
+        android:layout_toRightOf="@+id/photo"
+        android:layout_below="@+id/name"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textSize="10sp"
+    android:textColor="#000"
+    android:id="@+id/des"
+    android:text="@string/hosDes"
+    android:layout_below="@id/rating"
+    android:layout_marginStart="10dp"
+    android:layout_toRightOf="@id/photo"/>
+
+</RelativeLayout>
