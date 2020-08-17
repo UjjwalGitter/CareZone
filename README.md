@@ -10,4 +10,5 @@ A good amount of effort has been put to create a vivid and best in class #uidesi
 Built on one of the best #Android Architecture, i.e MVVM , LiveData, SQLite, ViewModel, Room library, Services. #lottie #animations, xml & Java.
 
 Link to the demo video: https://lnkd.in/dFt44ww
+
 ![semizayn](https://user-images.githubusercontent.com/43453065/89868467-79b7f180-dbd0-11ea-818f-a826a4ce70cb.png)
