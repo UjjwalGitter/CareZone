@@ -7,8 +7,17 @@ Furthermore you will receive notification for each added pill from the App. 📌
 
 A good amount of effort has been put to create a vivid and best in class #uidesign 😇
 
-Built on one of the best #Android Architecture, i.e MVVM , LiveData, SQLite, ViewModel, Room library, Services. #lottie #animations, xml & Java.
+Built using
+Languages: JAVA, XML
+1. Android Architecture, i.e MVVM 
+2. LiveData
+3. SQLite
+4. ViewModel
+4. Room Persistence library 
+5. lottie animations
 
 Link to the demo video: https://lnkd.in/dFt44ww
 
 ![semizayn](https://user-images.githubusercontent.com/43453065/89868467-79b7f180-dbd0-11ea-818f-a826a4ce70cb.png)
+
+
