@@ -4,8 +4,10 @@ Post featuring my recent work, CareZone♥️, the Medicine Pills tracker App. �
 This App will make sure that you never forget to take pills💊. All you need to do is fill in your pills in the App and it will automatically set a reminder for you.
 
 Furthermore you will receive notification for each added pill from the App. 📌
-
-A good amount of effort has been put to create a vivid and best in class #uidesign 😇
+Features:
+1. Add or delete multiple medical pills to set reminder.
+2. Notification Reminder for every medicine.
+3. Options available like taking pills, before, after or in mid of a meal.
 
 Built using
 Languages: JAVA, XML
