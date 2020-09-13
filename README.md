@@ -9,6 +9,10 @@ Features:
 2. Notification Reminder for every medicine.
 3. Options available like taking pills, before, after or in mid of a meal.
 
+Link to the demo video: https://lnkd.in/dFt44ww
+
+![semizayn](https://user-images.githubusercontent.com/43453065/89868467-79b7f180-dbd0-11ea-818f-a826a4ce70cb.png)
+
 Built using
 Languages: JAVA, XML
 1. Android Architecture, i.e MVVM 
@@ -18,8 +22,6 @@ Languages: JAVA, XML
 4. Room Persistence library 
 5. lottie animations
 
-Link to the demo video: https://lnkd.in/dFt44ww
 
-![semizayn](https://user-images.githubusercontent.com/43453065/89868467-79b7f180-dbd0-11ea-818f-a826a4ce70cb.png)
 
 
