@@ -8,6 +8,7 @@ Features:
 1. Add or delete multiple medical pills to set reminder.
 2. Notification Reminder for every medicine.
 3. Options available like taking pills, before, after or in mid of a meal.
+4. No need to open the App, the pills reminder will works even if the App is closed.
 
 Link to the demo video: https://lnkd.in/dFt44ww
 
@@ -15,12 +16,13 @@ Link to the demo video: https://lnkd.in/dFt44ww
 
 Built using
 Languages: JAVA, XML
-1. Android Architecture, i.e MVVM 
+Components used:
+1. Android Architecture, i.e MVVM, Android Services
 2. LiveData
 3. SQLite
 4. ViewModel
-4. Room Persistence library 
-5. lottie animations
+5. Room Persistence library 
+6. lottie animations
 
 
 
