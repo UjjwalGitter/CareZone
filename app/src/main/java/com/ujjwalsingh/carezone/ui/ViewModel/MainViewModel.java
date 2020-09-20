@@ -1,4 +1,4 @@
-package com.ujjwalsingh.carezone.ui.main;
+package com.ujjwalsingh.carezone.ui.ViewModel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

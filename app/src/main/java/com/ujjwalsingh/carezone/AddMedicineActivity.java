@@ -15,7 +15,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.snackbar.Snackbar;
 import com.ujjwalsingh.carezone.DataBase.Note;
-import com.ujjwalsingh.carezone.ui.main.NoteViewModel;
+import com.ujjwalsingh.carezone.ui.ViewModel.NoteViewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;

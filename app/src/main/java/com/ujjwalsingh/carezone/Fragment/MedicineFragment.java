@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 import com.ujjwalsingh.carezone.AddMedicineActivity;
 import com.ujjwalsingh.carezone.R;
-import com.ujjwalsingh.carezone.ui.main.NoteViewModel;
+import com.ujjwalsingh.carezone.ui.ViewModel.NoteViewModel;
 
 public class MedicineFragment extends Fragment {
     private NoteViewModel noteViewModel;

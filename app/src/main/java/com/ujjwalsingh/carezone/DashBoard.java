@@ -13,7 +13,7 @@ import com.ujjwalsingh.carezone.Adapter.LocationAdapter;
 import com.ujjwalsingh.carezone.Adapter.MostAdapter;
 import com.ujjwalsingh.carezone.Helperclass.LocationHelper;
 import com.ujjwalsingh.carezone.Helperclass.MostHelper;
-import com.ujjwalsingh.carezone.ui.main.MainViewModel;
+import com.ujjwalsingh.carezone.ui.ViewModel.MainViewModel;
 import com.ujjwalsingh.carezone.Fragment.MedicineFragment;
 
 import java.util.ArrayList;

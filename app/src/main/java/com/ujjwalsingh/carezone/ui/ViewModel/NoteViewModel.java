@@ -1,4 +1,4 @@
-package com.ujjwalsingh.carezone.ui.main;
+package com.ujjwalsingh.carezone.ui.ViewModel;
 
 import android.app.Application;
 

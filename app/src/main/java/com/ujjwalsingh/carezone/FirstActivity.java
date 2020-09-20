@@ -35,7 +35,7 @@ import android.widget.Toast;
 
 import com.ujjwalsingh.carezone.Adapter.MedicineAdapter;
 import com.ujjwalsingh.carezone.DataBase.Note;
-import com.ujjwalsingh.carezone.ui.main.NoteViewModel;
+import com.ujjwalsingh.carezone.ui.ViewModel.NoteViewModel;
 
 import java.text.DateFormat;
 import java.util.Calendar;
