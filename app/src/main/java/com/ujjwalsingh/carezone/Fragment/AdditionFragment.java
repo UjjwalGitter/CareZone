@@ -1,4 +1,4 @@
-package com.ujjwalsingh.carezone;
+package com.ujjwalsingh.carezone.Fragment;
 
 import android.os.Bundle;
 
@@ -11,12 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.ujjwalsingh.carezone.R;
+
 public class AdditionFragment extends Fragment {
 Spinner spinner;
 Spinner daySpinner;
 Spinner perdaySpinner;
     public AdditionFragment() {
-        // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

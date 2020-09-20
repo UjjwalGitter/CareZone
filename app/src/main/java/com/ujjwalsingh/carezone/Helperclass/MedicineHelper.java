@@ -2,15 +2,15 @@ package com.ujjwalsingh.carezone.Helperclass;
 
 public class MedicineHelper {
     int image;
-    String time,name, duration;
+    String time,name, minbefore;
     int arrow;
     boolean expandable;
 
-    public MedicineHelper(int image, String time, String name, String duration) {
+    public MedicineHelper(int image, String time, String name, String minbefore) {
         this.image = image;
         this.time = time;
         this.name = name;
-        this.duration = duration;
+        this.minbefore = minbefore;
         this.expandable = false;
     }
 
@@ -54,11 +54,11 @@ public class MedicineHelper {
         this.name = name;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getMinbefore() {
+        return minbefore;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setMinbefore(String minbefore) {
+        this.minbefore = minbefore;
     }
 }

@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D9E3F4"
-    tools:context=".ui.main.MedicineFragment">
+    tools:context=".Fragment.MedicineFragment">
 
     <ImageView
         android:layout_width="58dp"

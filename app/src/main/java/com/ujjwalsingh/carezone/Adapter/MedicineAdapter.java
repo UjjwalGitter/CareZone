@@ -1,8 +1,5 @@
 package com.ujjwalsingh.carezone.Adapter;
 
-import android.provider.ContactsContract;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,87 +12,163 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ujjwalsingh.carezone.Helperclass.MedicineHelper;
+import com.ujjwalsingh.carezone.DataBase.Note;
 import com.ujjwalsingh.carezone.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.MedicineViewModel> {
+public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> {
+    private List<Note> notes = new ArrayList<>();
+    public Note giveNote;
 
-    ArrayList<MedicineHelper> medicineHelperList;
-
-    public MedicineAdapter(ArrayList<MedicineHelper> medicineHelperList) {
-        this.medicineHelperList = medicineHelperList;
-    }
+    int pos = 0;
 
     @NonNull
     @Override
-    public MedicineViewModel onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.medicine_pills,parent,false);
-        MedicineViewModel medicineViewModel = new MedicineViewModel(view);
-        return medicineViewModel;
+    public MedicineViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.medicine_pills, parent, false);
+        return new MedicineViewHolder(view);
+    }
+
+    public void setNotes(List<Note> notes) {
+        this.notes = notes;
+        Log.i("Defaultre", String.valueOf(this.notes.size()));
+        notifyDataSetChanged();
+    }
+
+    public Note getNoteAt(int position) {
+        Log.i("Defaultr", String.valueOf(this.notes.size()));
+        return notes.get(position);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MedicineViewModel holder, int position) {
-    MedicineHelper medicineHelper = medicineHelperList.get(position);
-    holder.photo.setImageResource(medicineHelper.getImage());
-    holder.name.setText(medicineHelper.getName());
-    holder.time.setText(medicineHelper.getTime());
-    holder.duration.setText(medicineHelper.getDuration());
+    public void onBindViewHolder(@NonNull MedicineViewHolder holder, int position) {
 
-    boolean isExpandable = medicineHelperList.get(position).isExpandable();
+        if (pos == position)
+            Log.i("Defaulteew", String.valueOf(notes.size()));
 
-    holder.staticLayout.setVisibility(isExpandable ?  View.VISIBLE : View.GONE);
+        Note note = notes.get(position);
+        Log.i("343", "sds");
+        Log.i("43", note.toString());
+        Log.i("3411", String.valueOf(note.getId()));
+        Log.i("34335", String.valueOf(note.getFoodpattern()));
 
-    if (holder.staticLayout.getVisibility()==View.VISIBLE)
-        holder.arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
-else
-        holder.arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
+        if (note.getId() % 10 == 1) {
+            holder.photo.setImageResource(R.drawable.pill1);
+        } else if (note.getId() % 10 == 2) {
+            Log.i("Sherkisrt", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill2);
+        } else if (note.getId() % 10 == 3) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill11);
+        } else if (note.getId() % 10 == 4) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill4);
+        } else if (note.getId() % 10 == 5) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill5);
+        } else if (note.getId() % 10 == 6) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill6);
+        } else if (note.getId() % 10 == 7) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill7);
+        } else if (note.getId() % 10 == 8) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill8);
+        }else if (note.getId() % 10 == 9) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill9);
+        } else if (note.getId() % 10 == 0) {
+            Log.i("Sherkisrtew", String.valueOf(note.getImage()));
+            holder.photo.setImageResource(R.drawable.pill10);
+        }
 
 
+        if (note.getFoodpattern() == 1)
+            holder.foodp.setImageResource(R.drawable.foodp1);
 
+        if (note.getFoodpattern() == 2)
+            holder.foodp.setImageResource(R.drawable.foodp2);
+
+        if (note.getFoodpattern() == 3)
+            holder.foodp.setImageResource(R.drawable.foodp3);
+
+        holder.name.setText(note.getName());
+        holder.time.setText(note.getTime());
+        holder.minbefore.setText(note.getMinbefore());
+
+        boolean isExpandable = notes.get(position).isExpandable();
+
+        holder.staticLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
+
+        if (holder.staticLayout.getVisibility() == View.VISIBLE)
+            holder.arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
+        else
+            holder.arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
     }
 
     @Override
     public int getItemCount() {
-        return medicineHelperList.size();
+        return notes.size();
     }
 
-    public class MedicineViewModel extends RecyclerView.ViewHolder{
-        ImageView arrow;
+    public class MedicineViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView arrow, foodp;
         RelativeLayout staticLayout;
         CardView cardView;
         ImageView photo;
-        TextView name,time, duration;
-        public MedicineViewModel(@NonNull View itemView) {
+        TextView name, time, minbefore;
+
+        public MedicineViewHolder(@NonNull final View itemView) {
             super(itemView);
+
+
             photo = itemView.findViewById(R.id.photo);
-            name= itemView.findViewById(R.id.name);
+            foodp = itemView.findViewById(R.id.foodp);
+            name = itemView.findViewById(R.id.name);
             time = itemView.findViewById(R.id.time);
-            duration = itemView.findViewById(R.id.duration);
+            minbefore = itemView.findViewById(R.id.duration);
             arrow = itemView.findViewById(R.id.dropdown);
             staticLayout = itemView.findViewById(R.id.expand);
-            cardView  = itemView.findViewById(R.id.cardview);
-           arrow.setOnClickListener(new View.OnClickListener() {
+            cardView = itemView.findViewById(R.id.cardview);
+
+            if (pos == getAdapterPosition()) {
+                Log.i("treggra", String.valueOf(getAdapterPosition()));
+
+                giveNote = notes.get(getAdapterPosition());
+            }
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   MedicineHelper medicineHelper = medicineHelperList.get(getAdapterPosition());
-                   medicineHelper.setExpandable(!medicineHelper.isExpandable());
+                    giveNote = notes.get(getAdapterPosition());
+                    Log.i("treggraTr", String.valueOf(giveNote.getName()));
 
-                   Log.i("Medi",String.valueOf(medicineHelper.isExpandable()));
+                }
+            });
+            arrow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Note note = notes.get(getAdapterPosition());
+                    Note note = notes.get(getAdapterPosition());
+                    note.setExpandable(!note.isExpandable());
 
-                    if (medicineHelper.isExpandable()){
+                    Log.i("Medi", String.valueOf(note.isExpandable()));
+
+                    if (note.isExpandable()) {
                         arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
-                    }else {
+                    } else {
                         arrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_down_24);
                     }
                     notifyItemChanged(getAdapterPosition());
-                    Log.i("Medi",String.valueOf(medicineHelper.isExpandable()));
+                    Log.i("Medi", String.valueOf(note.isExpandable()));
 
                 }
             });
         }
     }
-
 }

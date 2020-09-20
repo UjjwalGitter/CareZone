@@ -1,118 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="10dp"
-android:background="@android:color/white"
     android:id="@+id/cardview"
-    android:layout_marginBottom="10dp"
-    app:cardCornerRadius="5dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:id="@+id/ks"
-        android:background="@android:color/white"
-        android:layout_height="wrap_content">
-<RelativeLayout
     android:layout_width="match_parent"
-    android:background="#FFF"
-    android:id="@+id/staticLayout"
-    android:padding="15dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6.3dp"
+    android:layout_marginBottom="6.5dp"
+    android:elevation="0dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
 
-    <ImageView
-        android:layout_width="50dp"
-        android:id="@+id/photo"
-        android:src="@drawable/pill"
-        android:layout_height="50dp"/>
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1.3dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="#CAC9C9"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="8:00 pm"
-        android:id="@+id/time"
-        android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/acme"
-        android:textColor="#000"
-        android:layout_toRightOf="@+id/photo"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        />
+    app:strokeWidth="0.1dp">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/time"
-        android:layout_marginStart="10dp"
-        android:layout_toRightOf="@+id/photo"
-        android:fontFamily="@font/chivo"
-        android:text="Paracetamol"
-        android:textColor="#000"
-        android:textSize="18sp" />
-
-    <ImageView
-        android:layout_width="35dp"
-        android:id="@+id/dropdown"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
-</RelativeLayout>
     <RelativeLayout
+        android:id="@+id/ks"
         android:layout_width="match_parent"
-        android:id="@+id/expand"
-        android:visibility="gone"
-        android:layout_below="@id/staticLayout"
-        android:background="#FFF"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/staticLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/eczar"
-            android:text="Featured:"
-            android:textColor="#000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:background="#FFF"
+            android:padding="15dp">
 
-        <TextView
-            android:id="@+id/duration"
-            android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/drug5" />
+
+            <ImageView
+                android:id="@+id/dropdown"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/photo"
+                android:fontFamily="@font/chivo"
+                android:text="Paracetamol"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/photo"
+                android:fontFamily="@font/acme"
+                android:text="8:00 pm"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expand"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:layout_toLeftOf="@+id/danda"
-            android:fontFamily="@font/judson"
-            android:text="15 Min."
-            android:textColor="#000"
-            android:textSize="13sp" />
+            android:layout_below="@id/staticLayout"
+            android:background="#FFF"
+            android:visibility="gone">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_height="wrap_content"
-            android:text="|"
-            android:textColor="#000"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/fastfood"
-            android:id="@+id/danda"
-            />
+            <ImageView
+                android:id="@+id/foodp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/foodp1" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:id="@+id/fastfood"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="22dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_fastfood_24"/>
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@+id/danda"
+                android:fontFamily="@font/judson"
+                android:text="15 Min."
+                android:textColor="#000"
+                android:textSize="13sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/eczar"
+                android:text="Featured:"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/danda"
+                android:layout_width="1dp"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@id/foodp"
+                android:background="#000"
+                android:gravity="center_vertical" />
+
+        </RelativeLayout>
     </RelativeLayout>
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
